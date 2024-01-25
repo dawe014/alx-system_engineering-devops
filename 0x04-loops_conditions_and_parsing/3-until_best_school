@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Displays "Holberton School" 10 times using an until loop.
 
 count=0
 
