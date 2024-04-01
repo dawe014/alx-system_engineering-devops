@@ -62,7 +62,7 @@ server_config="server {
         try_files \$uri \$uri/ =404;
     }
     if (\$request_filename ~ redirect_me){
-        rewrite ^ www.google.com permanent;
+        rewrite ^ https://th3-gr00t.tk permanent;
     }
     error_page 404 /error_404.html;
     location = /error_404.html {
