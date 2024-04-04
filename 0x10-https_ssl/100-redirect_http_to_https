@@ -1,6 +1,5 @@
 # A good habit is to enforce HTTPS traffic so that no unencrypted traffic is possible. Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
 
-
 global
         log /dev/log    local0
         log /dev/log    local1 notice
@@ -48,5 +47,5 @@ frontend clickviral-frontend-https
 
 backend clickviral-backend
         balance roundrobin
-        server 151666-web-01 100.25.190.21:80 check
-        server 151666-web-02 54.160.77.90:80 check
+        server 523881-web-01 54.90.43.161:80 check
+        server 523881-web-02 52.87.217.6:80 check
