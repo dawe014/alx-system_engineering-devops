@@ -1,5 +1,3 @@
-# Create a certificate using certbot and configure HAproxy to accept encrypted traffic for your subdomain www..
-
 global
         log /dev/log    local0
         log /dev/log    local1 notice
