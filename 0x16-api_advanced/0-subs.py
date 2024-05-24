@@ -10,7 +10,11 @@ def number_of_subscribers(subreddit):
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
     }
     response = requests.get(url, headers=headers, allow_redirects=False)
-    if response.status_code == 404:
-        return 0
-    results = response.json().get("data")
-    return results.get("subscribers")
+    
+    if response.status_code == 200:
+        results = response.json().get("data")
+        if results and "subscribers" in results:
+            return results.get("subscribers")
+    
+    # Return 0 if the subreddit does not exist or other issues
+    return 0
